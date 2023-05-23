@@ -11,6 +11,7 @@ import { GlobalStyle } from './styles/global'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { AdminPanel } from './pages/Admin'
+import { NotFound } from './pages/NotFound'
 
 function App() {
 	const [count, setCount] = useState(0)
@@ -18,12 +19,13 @@ function App() {
 	return (
 		<div className="App">
 
-			{/* <Routes>
+			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/login' element={<Login />} />
 				<Route path='/dashboard' element={<Dashboard />} />
 				<Route path='/adminpanel' element={<AdminPanel />} />
-			</Routes> */}
+				<Route path='*' element={<NotFound />} />
+			</Routes>
 
 			<GlobalStyle />
 			<ToastContainer />
