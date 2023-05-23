@@ -22,6 +22,7 @@ function App() {
 				<Route path='/login' element={<Login/>}/>
 				<Route path='/dashboard' element={<Dashboard/>}/>
 				<Route path='/adminpanel' element={<AdminPanel/>}/>
+				<Route path='*' element={'not found'}/>
 			</Routes>
 			<GlobalStyle/>
 			<ToastContainer/>
