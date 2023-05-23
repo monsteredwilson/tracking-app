@@ -1,0 +1,55 @@
+
+.FilteredElementContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 95%;
+}
+
+.CodesToBuyList{
+	display: flex;
+	flex-direction: row;
+	max-width: 350px;
+	height: 95%;
+	align-items: center;
+	justify-content: flex-start;
+	overflow-x: scroll;
+	gap: 16px;
+	/* margin: 0 auto; */
+	padding: 0;
+}
+
+.CardCodeToBuy{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 300px;
+	height: 540px;
+	gap: 12px;
+	padding: 12px;
+	background-color: #727272;
+	border: 1px solid ;
+	border-radius: 8px;
+}
+
+.CardCodeToBuy>div{
+	text-align: left;
+	width: 280px;
+}
+
+.CardCodeToBuy>div>p{
+	color: #fff;
+}
+
+.ToSelect{
+	background-color: #f8aa03;
+	color: #fff;
+}
+
+.Selected{
+	background-color: #fff;
+	color: #000;
+}
+

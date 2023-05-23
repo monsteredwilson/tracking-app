@@ -1,0 +1,59 @@
+
+.ListUsersContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+.ListUsers{
+	display: flex;
+	flex-direction: row;
+	max-width: 350px;
+	height: 95%;
+	align-items: center;
+	justify-content: flex-start;
+	overflow-x: scroll;
+	gap: 16px;
+	/* margin: 0 auto; */
+	padding: 0;
+}
+
+.UserCard{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 250px;
+	height: 380px;
+	gap: 12px;
+	padding: 12px;
+	background-color: #727272;
+	border: 1px solid ;
+	border-radius: 8px;
+}
+
+.UserCard>div{
+	text-align: left;
+	width: 250px;
+}
+
+.UserCard>div>p{
+	color: #fff;
+}
+
+.ButtonsUser{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	max-width: 98%;
+	gap: 12px;
+}
+
+.ButtonsUser>button{
+	color: #fff;
+	background-color: #f8aa03;
+}

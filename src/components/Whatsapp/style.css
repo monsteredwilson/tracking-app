@@ -1,0 +1,12 @@
+
+.WhatsappContainer{
+	display: flex;
+	position: fixed;
+	bottom: 45px;
+	right: 25px;
+	z-index: 1;
+}
+
+.WhatsappButton{
+	height: 60px;
+}

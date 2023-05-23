@@ -1,0 +1,49 @@
+
+.DeleteModalBg{
+	background-color: #00000090;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+}
+
+.DeleteContainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #727272;
+	padding: 16px;
+	border-radius: 8px;
+	width: 80%;
+	margin: 0 auto;
+	height: 250px;
+}
+
+.DeleteContainer>p{
+	color: #fff;
+}
+
+.DeleteHeaderModal{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.CloseDeleteModal{
+	color: #fff;
+	background-color: #f8aa03;
+}
+
+
+.DeleteButtonSubmit{
+	color: #fff;
+	background-color: #f8aa03;
+}
