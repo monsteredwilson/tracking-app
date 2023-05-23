@@ -9,6 +9,7 @@ import { Home } from './pages/Home'
 import { Login } from './pages/Login'
 import { Dashboard } from './pages/Dashboard'
 import { AdminPanel } from './pages/Admin'
+import { NotFound } from './pages/NotFound'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 					<Route path='/login' element={<Login />} />
 					<Route path='/dashboard' element={<Dashboard />} />
 					<Route path='/adminpanel' element={<AdminPanel />} />
+					<Route path='*' element={<NotFound/>}/>
 				</Routes>
 			</UserProvider>
 		</AdminProvider>
