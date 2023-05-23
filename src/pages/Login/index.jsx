@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom"
 export function Login(){
 	navigate = useNavigate()
 
-	useEffect(()=>{
+	// useEffect(()=>{
 
-	},[])
+	// },[])
 
 	return(
 		<PageLoginContainer>
