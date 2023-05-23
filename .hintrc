@@ -21,6 +21,7 @@
           "font-synthesis"
         ]
       }
-    ]
+    ],
+    "meta-viewport": "off"
   }
 }
