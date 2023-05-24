@@ -88,7 +88,7 @@ export function UserProvider ({children}){
 
 			setMyCodes(response.data)
 		} catch (error) {
-			toast.error('Erro ao buscar códigos')
+// 			toast.error('Erro ao buscar códigos')
 		}
 	}
 
