@@ -88,7 +88,7 @@ export function UserProvider ({children}){
 
 			setMyCodes(response.data)
 		} catch (error) {
-			
+
 		}
 
 	useEffect(()=>{
@@ -102,4 +102,5 @@ export function UserProvider ({children}){
 			{children}
 		</UserContext.Provider>
 	)
+}
 }
