@@ -88,8 +88,9 @@ export function UserProvider ({children}){
 
 			setMyCodes(response.data)
 		} catch (error) {
-
+			// toast.error('Erro ao buscar códigos')
 		}
+	}
 
 	useEffect(()=>{
 		getMyCodes()
@@ -102,5 +103,4 @@ export function UserProvider ({children}){
 			{children}
 		</UserContext.Provider>
 	)
-}
 }
