@@ -53,3 +53,14 @@
 	color: #000;
 }
 
+@media (min-width: 700px) {
+	.FilteredElementContainer{
+		max-width: 900px;
+	}
+
+	.CodesToBuyList{
+		max-width: 100vh;
+		width: 100%;
+		height: 620px;
+	}
+}

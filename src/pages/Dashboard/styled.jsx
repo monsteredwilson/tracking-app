@@ -114,4 +114,29 @@ export const DashContainer = styled.div`
 		color: #fff;
 		background-color: #f8aa03;
 	}
+
+	@media (min-width: 700px) {
+		width: 100vw;
+
+	.ContainerDash{
+		max-width: 100vw;
+		width: 100vw;
+	}
+
+	.ContainerDash>p{
+		margin:0;
+	}
+
+	
+
+	main{
+		display: flex;
+		width: 90vw;
+		margin: 0 auto;
+		gap: 32px;
+		margin-top: 12px;
+		/* max-height: 90vh; */
+	}
+
+	}
 `

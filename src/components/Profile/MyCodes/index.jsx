@@ -11,13 +11,13 @@ export function MyCodes(){
 	const responseCodes = myCodes
 
 	return (
-		<div className='FilElementContainer'>
-			<ul className="CodesToBuyList">
+		<div className='FilteredElementContainerProfile'>
+			<ul className="CodesToBuyListProfile">
 				{responseCodes ? (
 					responseCodes.map((element) => {
 						
 						return (
-							<li key={element.id} className="CardCodeToBuy">
+							<li key={element.id} className="CardCodeToBuyProfile">
 								<div>
 									<h3>Código de Rastreio: </h3>
 									<p>{element.codigo}</p>

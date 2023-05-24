@@ -24,12 +24,15 @@ export function AdminPanel() {
 		getListUsers()
 		getCodesRows()
 		calcSoldCodes()
+		
 	}, [])
 
+	const totalCredits = listUser.reduce((accumulator, item) => accumulator + item.credits, 0);
 	function calcSoldCodes(){
-		const totalCredits = listUser?.reduce((accumulator, item) => accumulator + item.credits, 0);
 		setSoldCredits(totalCredits)
+		// localStorage.setItem('totalCredits', totalCredits)
 	}
+	calcSoldCodes()
 
 	function logout(){
 		localStorage.clear()

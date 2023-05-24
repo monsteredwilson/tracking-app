@@ -98,7 +98,7 @@ export const CreditContainer = styled.div`
 		top: 0;
 		left: 0;
 		background-color: #00000090;
-		z-index: 1;
+		z-index: 2;
 		margin: 0 auto;
 		padding: 0;
 		justify-content: center;
@@ -144,5 +144,50 @@ export const CreditContainer = styled.div`
 	.ImgPix{
 		height: 250px;
 		width: 250px;
+	}
+
+	@media (min-width: 700px) {
+		max-width: 600px;
+	}
+
+	.CreditsContainer{
+		height: 600px;
+		max-width: 600px;
+		padding: 16px 0;
+		margin: 0 ;
+	}
+
+	.ListCards{
+		flex-direction: column;
+		height: 520px;
+		max-width: 600px;
+		overflow-x: hidden;
+		margin: 0;
+	}
+
+	.Card{
+		flex-direction: row;
+		max-width: 480px;
+		min-width: 310px;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px;
+	}
+
+	.Card>h5{
+		width: 30%;
+		font-size: 14px;
+	}
+
+	.Card>div>p{
+		font-size: 12px;
+	}
+
+	.SectionModal{
+		max-width: 580px;
+	}
+
+	h4{
+		margin-top: -22px;
 	}
 `

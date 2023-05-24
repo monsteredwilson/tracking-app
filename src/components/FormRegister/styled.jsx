@@ -9,6 +9,7 @@ export const RegisterContainer = styled.div`
 	/* max-width: 500px; */
 	min-width: 320px;
 	width: 85%;
+	max-width: 550px;
 	justify-content: center;
 	/* padding: 8px; */
 	

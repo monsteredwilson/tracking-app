@@ -40,4 +40,8 @@ export const ProfileContainer = styled.div`
 		align-items: center;
 
 	}
+
+	@media (min-width: 900px) {
+		width: 690px;
+	}
 `
