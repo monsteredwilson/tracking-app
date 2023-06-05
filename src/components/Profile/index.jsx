@@ -3,6 +3,7 @@ import { api } from "../../services/api";
 import { ProfileContainer } from "./styled";
 import { UserContext } from "../../contexts/UserContext";
 import { MyCodes } from "./MyCodes";
+import ExportToExcel from "../DownloadCodes";
 
 
 export function ProfileComponent() {
@@ -16,6 +17,7 @@ export function ProfileComponent() {
 					<h3>Créditos: {userData.credits}</h3>
 				</div>
 				<MyCodes/>
+				<ExportToExcel/>
 			</div>
 		</ProfileContainer>
 	)
