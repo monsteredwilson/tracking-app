@@ -21,9 +21,11 @@ export function AdminProvider({ children }) {
 		try {
 			setLoading(true)
 			const token = localStorage.getItem('token')
-			const response = await api.get('/users', {headers:{
-				Authorization: `Bearer ${token}`
-			}})
+			const response = await api.get('/users', {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			setListUsers(response.data)
 			setLoading(false)
 		} catch (error) {
@@ -32,16 +34,18 @@ export function AdminProvider({ children }) {
 		}
 	}
 
-	async function getCodesRows(){
+	async function getCodesRows() {
 		try {
 			setLoading(true)
 			const token = localStorage.getItem('token')
-			const response = await api.get('/codes/rows', {headers:{
-				Authorization: `Bearer ${token}`
-			}})
+			const response = await api.get('/codes/rows', {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			setLoading(false)
 			setCodesRows(response.data)
-			
+
 		} catch (error) {
 			setLoading(false)
 			toast.error('Erro')
@@ -49,13 +53,15 @@ export function AdminProvider({ children }) {
 	}
 
 
-	async function getUserByEmail(userEmail){
+	async function getUserByEmail(userEmail) {
 		try {
 			setLoading(true)
 			const token = localStorage.getItem('token')
-			const response = await api.post('/users/email', userEmail, {headers:{
-				Authorization: `Bearer ${token}`
-			}})
+			const response = await api.post('/users/email', userEmail, {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			setLoading(false)
 			setUserData(response.data)
 		} catch (error) {
@@ -64,20 +70,25 @@ export function AdminProvider({ children }) {
 		}
 	}
 
-	async function inputCreditsById(userId, credits){
+	async function inputCreditsById(userId, credits) {
 		let creditos = {
-				credits: 0
-			}
+			credits: 0
+		}
 		try {
 			setLoading(true)
 			creditos = {
 				credits: credits
 			}
+			console.log(userId)
 			const token = localStorage.getItem('token')
-			const response = await api.patch(`/users/credits/${userId}`, creditos ,{headers:{
-				Authorization: `Bearer ${token}`
-			}})
-			response
+			console.log(token)
+			const response = await api.patch(`/users/credits/${userId}`, creditos, {
+				headers: {
+					Authorization: `Bearer ${token}`
+
+				}
+			})
+			// response
 			setLoading(false)
 			getListUsers()
 			setUserData(userData)
@@ -88,13 +99,15 @@ export function AdminProvider({ children }) {
 		}
 	}
 
-	async function deleteUserById(userId){
+	async function deleteUserById(userId) {
 		try {
 			setLoading(true)
 			const token = localStorage.getItem('token')
-			const response = await api.delete(`/users/${userId}`, {headers:{
-				Authorization: `Bearer ${token}`
-			}})
+			const response = await api.delete(`/users/${userId}`, {
+				headers: {
+					Authorization: `Bearer ${token}`
+				}
+			})
 			response
 			setLoading(false)
 			getListUsers()
@@ -107,7 +120,7 @@ export function AdminProvider({ children }) {
 	}
 
 	return (
-		<AdminContext.Provider value={{getListUsers,listUser, loading, setLoading, getCodesRows, codesRows, showCreditsModal, setShowCreditsModal, userId, setUserId, inputCreditsById, showDeleteModal, setShowDeleteModal,userEmail, setUserEmail, deleteUserById,soldCredits, setSoldCredits}}>
+		<AdminContext.Provider value={{ getListUsers, listUser, loading, setLoading, getCodesRows, codesRows, showCreditsModal, setShowCreditsModal, userId, setUserId, inputCreditsById, showDeleteModal, setShowDeleteModal, userEmail, setUserEmail, deleteUserById, soldCredits, setSoldCredits }}>
 			{children}
 		</AdminContext.Provider>
 	)
